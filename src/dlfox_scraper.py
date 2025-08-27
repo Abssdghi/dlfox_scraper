@@ -2,7 +2,7 @@ import requests, json
 from bs4 import BeautifulSoup
 
 
-def dlfox_get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
+def get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
     '''
     increase the count to get more posts
     '''
@@ -30,7 +30,7 @@ def dlfox_get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
     return result
 
 
-def dlfox_get_info(url="https://dlfox.com/fortnite/"):
+def get_info(url="https://dlfox.com/fortnite/"):
     result = {
         'url':'',
         'title':'',
@@ -114,7 +114,5 @@ def dlfox_get_info(url="https://dlfox.com/fortnite/"):
     return result
 
 
-def dlfox_search(keyword="game", count=1):
+def search(keyword="game", count=1):
     return dlfox_get_posts(count, f"https://dlfox.com/?s={keyword}")
-
-print(dlfox_search("liminal space"))
