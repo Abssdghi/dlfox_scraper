@@ -18,7 +18,7 @@ def get_latest_posts(pagecount=1):
             "data": [str]
         }
     """
-    return get_dlfox_posts(count, "https://dlfox.com/wp-admin/admin-ajax.php")
+    return get_dlfox_posts(pagecount, "https://dlfox.com/wp-admin/admin-ajax.php")
 
 
 def get_game_info(url="https://dlfox.com/fortnite/"):
