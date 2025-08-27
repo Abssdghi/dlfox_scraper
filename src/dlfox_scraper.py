@@ -2,7 +2,7 @@ import requests, json
 from bs4 import BeautifulSoup
 
 
-def get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
+def get_latest_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
     '''
     increase the count to get more posts
     '''
