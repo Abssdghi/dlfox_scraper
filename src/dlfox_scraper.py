@@ -31,6 +31,31 @@ def get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
 
 
 def get_info(url="https://dlfox.com/fortnite/"):
+    """
+    Get a dlfox game info.
+
+    Args:
+        url (str): game page url.
+
+    Returns:
+        dict: Response in format:
+        {
+            "success": bool,
+            "message": str,
+            "data": {
+                "url": str,
+                "title": str,
+                "size": str,
+                'version": str,
+                "category": str,
+                "desc": str,
+                "system": str,
+                "images": [str],
+                "download_links": [str],
+                "parts": int
+            }
+        }
+    """
     result = {
         'url':'',
         'title':'',
