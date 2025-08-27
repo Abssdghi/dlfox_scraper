@@ -69,12 +69,17 @@ def get_game_info(url="https://dlfox.com/fortnite/"):
         "parts": 0
     }
 
-    headers = {"User-Agent": "Mozilla/5.0"}
-    page = requests.get(url=url, headers=headers).text
+    try:
+        
+        headers = {"User-Agent": "Mozilla/5.0"}
+        page = requests.get(url=url, headers=headers).text
 
-    soup = BeautifulSoup(page, 'html.parser')
-    game = soup.find('div', {'class':'col-md-9 col-sm-9 col-xs-12 right_column'})
-    content = game.find('div', {'class':'single_content'})
+        soup = BeautifulSoup(page, 'html.parser')
+        game = soup.find('div', {'class':'col-md-9 col-sm-9 col-xs-12 right_column'})
+        content = game.find('div', {'class':'single_content'})
+        
+    except Exception as e:
+        return result
 
     # url
     result['url'] = url
