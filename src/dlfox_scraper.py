@@ -46,7 +46,7 @@ def get_game_info(url="https://dlfox.com/fortnite/"):
                 "url": str,
                 "title": str,
                 "size": str,
-                'version": str,
+                "version": str,
                 "category": str,
                 "desc": str,
                 "system": str,
