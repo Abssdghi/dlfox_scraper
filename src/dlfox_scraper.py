@@ -30,7 +30,7 @@ def get_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
     return result
 
 
-def get_info(url="https://dlfox.com/fortnite/"):
+def get_game_info(url="https://dlfox.com/fortnite/"):
     """
     Get a dlfox game info.
 
