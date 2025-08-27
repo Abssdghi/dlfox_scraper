@@ -57,17 +57,16 @@ def get_game_info(url="https://dlfox.com/fortnite/"):
         }
     """
     result = {
-        'url':'',
-        'title':'',
-        'size':'',
-        'version':'',
-        'category':'',
-        'desc':'',
-        'system':'',
-        'images':'',
-        'download_links':'',
-        'parts':'',
-        'comments':''
+        "url": "",
+        "title": "",
+        "size": "",
+        "version": "",
+        "category": "",
+        "desc": "",
+        "system": "",
+        "images": [""],
+        "download_links": [""],
+        "parts": 0
     }
 
     headers = {"User-Agent": "Mozilla/5.0"}
