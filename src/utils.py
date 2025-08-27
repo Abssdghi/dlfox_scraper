@@ -5,7 +5,7 @@ def get_dlfox_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
     result = {
         "success": True,
         "message": "Operation successful",
-        "data": {}
+        "data": []
     }
     
     try:
@@ -26,7 +26,7 @@ def get_dlfox_posts(count=1, url="https://dlfox.com/wp-admin/admin-ajax.php"):
             posts = soup.find_all('div', {'class':'col-md-3 col-sm-3 col-xs-3 product_image'})
 
             for i in posts:
-                data.append(i.find('a').get('href'))
+                result['data'].append(i.find('a').get('href'))
     except Exception as e:
         result["success"] = False
         result["message"] = e
