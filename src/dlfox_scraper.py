@@ -4,9 +4,20 @@ from utils import *
 
 
 def get_latest_posts(pagecount=1):
-    '''
-    increase the count to get more posts
-    '''
+    """
+    Get dlfox.com Latest Posts. 
+
+    Args:
+        pagecount (int): increase the pagecount to get more posts.
+
+    Returns:
+        dict: Response in format:
+        {
+            "success": bool,
+            "message": str,
+            "data": [str]
+        }
+    """
     return get_dlfox_posts(count, "https://dlfox.com/wp-admin/admin-ajax.php")
 
 
