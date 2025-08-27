@@ -132,5 +132,5 @@ def get_game_info(url="https://dlfox.com/fortnite/"):
     return result
 
 
-def search(keyword="game", count=1):
-    return get_posts(count, f"https://dlfox.com/?s={keyword}")
+def search(keyword="game", pagecount=1):
+    return get_dlfox_posts(pagecount, f"https://dlfox.com/?s={keyword}")
