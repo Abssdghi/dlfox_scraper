@@ -144,4 +144,19 @@ def get_game_info(url="https://dlfox.com/fortnite/"):
 
 
 def search(keyword="game", pagecount=1):
+    """
+    Search for dlfox games.
+
+    Args:
+        keyword (str): your search keyword.
+        pagecount (int): increase the pagecount to get more posts.
+
+    Returns:
+        dict: Response in format:
+        {
+            "success": bool,
+            "message": str,
+            "data": [str]
+        }
+    """
     return get_dlfox_posts(pagecount, f"https://dlfox.com/?s={keyword}")
