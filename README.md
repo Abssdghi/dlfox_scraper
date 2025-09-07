@@ -2,7 +2,7 @@
 
 ![banner](assets/banner.png)
 
-**Dlfox Scraper** is a tool for extracting game data from <a href="https://dlfox.com">Dlfox.com</a> using web scraping.
+**Dlfox Scraper** is a tool for extracting game data from <a href="https://dlfox.com">Dlfox</a> using web scraping.
 
 ⚠️ This project is unofficial and purely for educational purposes. No official API was used.
 
